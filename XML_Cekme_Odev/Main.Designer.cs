@@ -52,7 +52,7 @@
             // 
             // btnXml
             // 
-            this.btnXml.Location = new System.Drawing.Point(529, 65);
+            this.btnXml.Location = new System.Drawing.Point(556, 76);
             this.btnXml.Name = "btnXml";
             this.btnXml.Size = new System.Drawing.Size(75, 23);
             this.btnXml.TabIndex = 2;
