@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDetay = new System.Windows.Forms.TextBox();
             this.lblBaslik = new System.Windows.Forms.Label();
             this.lblDetay = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -43,13 +43,14 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // txtDetay
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 100);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(509, 246);
-            this.textBox1.TabIndex = 1;
+            this.txtDetay.Location = new System.Drawing.Point(12, 100);
+            this.txtDetay.Multiline = true;
+            this.txtDetay.Name = "txtDetay";
+            this.txtDetay.ReadOnly = true;
+            this.txtDetay.Size = new System.Drawing.Size(509, 246);
+            this.txtDetay.TabIndex = 1;
             // 
             // lblBaslik
             // 
@@ -76,7 +77,7 @@
             this.ClientSize = new System.Drawing.Size(697, 358);
             this.Controls.Add(this.lblDetay);
             this.Controls.Add(this.lblBaslik);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDetay);
             this.Controls.Add(this.pictureBox1);
             this.Name = "HaberDetay";
             this.Text = "HaberDetay";
@@ -90,7 +91,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDetay;
         private System.Windows.Forms.Label lblBaslik;
         private System.Windows.Forms.Label lblDetay;
     }
