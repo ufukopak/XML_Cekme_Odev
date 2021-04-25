@@ -44,7 +44,7 @@ namespace XML_Cekme_Odev
 
         private void Main_Load(object sender, EventArgs e)
         {
-            XmlTextReader xmlOku = new XmlTextReader("https://www.haberturk.com/rss/manset.xml");
+            XmlTextReader xmlOku = new XmlTextReader("http://www.star.com.tr/rss/sondakika.xml");
             while (xmlOku.Read())
             {
                 if (xmlOku.Name == "title")

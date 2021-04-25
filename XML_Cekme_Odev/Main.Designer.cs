@@ -87,7 +87,7 @@
             this.Controls.Add(this.tbBaslik);
             this.Controls.Add(this.lbBasliklar);
             this.Name = "Main";
-            this.Text = "Form1";
+            this.Text = "Haber";
             this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
