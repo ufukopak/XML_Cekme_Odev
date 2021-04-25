@@ -29,5 +29,10 @@ namespace XML_Cekme_Odev
                 }
             }
         }
+
+        private void lbBasliklar_DoubleClick(object sender, EventArgs e)
+        {
+            tbBaslik.Text = lbBasliklar.Items[lbBasliklar.SelectedIndex].ToString();
+        }
     }
 }

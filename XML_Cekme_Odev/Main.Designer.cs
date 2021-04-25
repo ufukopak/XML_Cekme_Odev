@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lbBasliklar = new System.Windows.Forms.ListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbBaslik = new System.Windows.Forms.TextBox();
             this.btnXml = new System.Windows.Forms.Button();
             this.btnHaberGoster = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,13 +42,14 @@
             this.lbBasliklar.Name = "lbBasliklar";
             this.lbBasliklar.Size = new System.Drawing.Size(391, 329);
             this.lbBasliklar.TabIndex = 0;
+            this.lbBasliklar.DoubleClick += new System.EventHandler(this.lbBasliklar_DoubleClick);
             // 
-            // textBox1
+            // tbBaslik
             // 
-            this.textBox1.Location = new System.Drawing.Point(435, 191);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(328, 20);
-            this.textBox1.TabIndex = 1;
+            this.tbBaslik.Location = new System.Drawing.Point(435, 191);
+            this.tbBaslik.Name = "tbBaslik";
+            this.tbBaslik.Size = new System.Drawing.Size(328, 20);
+            this.tbBaslik.TabIndex = 1;
             // 
             // btnXml
             // 
@@ -86,7 +87,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnHaberGoster);
             this.Controls.Add(this.btnXml);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbBaslik);
             this.Controls.Add(this.lbBasliklar);
             this.Name = "Main";
             this.Text = "Form1";
@@ -98,7 +99,7 @@
         #endregion
 
         private System.Windows.Forms.ListBox lbBasliklar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbBaslik;
         private System.Windows.Forms.Button btnXml;
         private System.Windows.Forms.Button btnHaberGoster;
         private System.Windows.Forms.Label label1;
