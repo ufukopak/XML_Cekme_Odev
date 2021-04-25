@@ -69,6 +69,7 @@
             this.btnHaberGoster.TabIndex = 3;
             this.btnHaberGoster.Text = "Detay";
             this.btnHaberGoster.UseVisualStyleBackColor = true;
+            this.btnHaberGoster.Click += new System.EventHandler(this.btnHaberGoster_Click);
             // 
             // label1
             // 

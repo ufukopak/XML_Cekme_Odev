@@ -16,6 +16,11 @@ namespace XML_Cekme_Odev
         {
             InitializeComponent();
         }
+        public string baslik;
 
+        private void HaberDetay_Load(object sender, EventArgs e)
+        {
+            lblBaslik.Text = baslik;
+        }
     }
 }

@@ -17,7 +17,6 @@ namespace XML_Cekme_Odev
         {
             InitializeComponent();
         }
-
         private void btnXml_Click(object sender, EventArgs e)
         {
             XmlTextReader xmlOku = new XmlTextReader("https://www.haberturk.com/rss/manset.xml");
@@ -33,6 +32,13 @@ namespace XML_Cekme_Odev
         private void lbBasliklar_DoubleClick(object sender, EventArgs e)
         {
             tbBaslik.Text = lbBasliklar.Items[lbBasliklar.SelectedIndex].ToString();
+        }
+
+        private void btnHaberGoster_Click(object sender, EventArgs e)
+        {
+            HaberDetay haberDetay = new HaberDetay();
+            haberDetay.baslik = tbBaslik.Text;
+            haberDetay.Show();
         }
     }
 }

@@ -80,6 +80,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "HaberDetay";
             this.Text = "HaberDetay";
+            this.Load += new System.EventHandler(this.HaberDetay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
