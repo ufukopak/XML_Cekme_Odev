@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace XML_Cekme_Odev
 {
@@ -19,7 +20,14 @@ namespace XML_Cekme_Odev
 
         private void btnXml_Click(object sender, EventArgs e)
         {
-
+            XmlTextReader xmlOku = new XmlTextReader("https://www.haberturk.com/rss/manset.xml");
+            while (xmlOku.Read())
+            {
+                if (xmlOku.Name == "title")
+                {
+                    lbBasliklar.Items.Add(xmlOku.ReadString());
+                }
+            }
         }
     }
 }
