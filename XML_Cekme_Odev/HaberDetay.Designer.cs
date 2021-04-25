@@ -30,16 +30,17 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtDetay = new System.Windows.Forms.TextBox();
-            this.lblBaslik = new System.Windows.Forms.Label();
             this.lblDetay = new System.Windows.Forms.Label();
+            this.txtBaslik = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(538, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(412, 100);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 109);
+            this.pictureBox1.Size = new System.Drawing.Size(273, 246);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -49,17 +50,8 @@
             this.txtDetay.Multiline = true;
             this.txtDetay.Name = "txtDetay";
             this.txtDetay.ReadOnly = true;
-            this.txtDetay.Size = new System.Drawing.Size(509, 246);
+            this.txtDetay.Size = new System.Drawing.Size(394, 246);
             this.txtDetay.TabIndex = 1;
-            // 
-            // lblBaslik
-            // 
-            this.lblBaslik.AutoSize = true;
-            this.lblBaslik.Location = new System.Drawing.Point(220, 12);
-            this.lblBaslik.Name = "lblBaslik";
-            this.lblBaslik.Size = new System.Drawing.Size(35, 13);
-            this.lblBaslik.TabIndex = 2;
-            this.lblBaslik.Text = "label1";
             // 
             // lblDetay
             // 
@@ -70,13 +62,22 @@
             this.lblDetay.TabIndex = 3;
             this.lblDetay.Text = "Detay";
             // 
+            // txtBaslik
+            // 
+            this.txtBaslik.Location = new System.Drawing.Point(15, 33);
+            this.txtBaslik.Name = "txtBaslik";
+            this.txtBaslik.ReadOnly = true;
+            this.txtBaslik.Size = new System.Drawing.Size(673, 20);
+            this.txtBaslik.TabIndex = 4;
+            this.txtBaslik.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // HaberDetay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(697, 358);
+            this.Controls.Add(this.txtBaslik);
             this.Controls.Add(this.lblDetay);
-            this.Controls.Add(this.lblBaslik);
             this.Controls.Add(this.txtDetay);
             this.Controls.Add(this.pictureBox1);
             this.Name = "HaberDetay";
@@ -92,7 +93,7 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtDetay;
-        private System.Windows.Forms.Label lblBaslik;
         private System.Windows.Forms.Label lblDetay;
+        private System.Windows.Forms.TextBox txtBaslik;
     }
 }

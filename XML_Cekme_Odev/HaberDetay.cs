@@ -22,7 +22,7 @@ namespace XML_Cekme_Odev
         private void HaberDetay_Load(object sender, EventArgs e)
         {
             bool veriDeMiyim = false;
-            lblBaslik.Text = baslik;
+            txtBaslik.Text = baslik;
             XmlTextReader xmlOku = new XmlTextReader("http://www.star.com.tr/rss/sondakika.xml");
             while (xmlOku.Read())
             {
@@ -30,9 +30,17 @@ namespace XML_Cekme_Odev
                 {
                     veriDeMiyim = true;
                 }
-                if (veriDeMiyim && xmlOku.Name == "description")
+                else if(xmlOku.Name == "title")
+                {
+                    veriDeMiyim = false;
+                }
+                if (veriDeMiyim && xmlOku.Name.ToLower() == "description")
                 {
                     txtDetay.Text = xmlOku.ReadString();
+                }
+                if (veriDeMiyim && xmlOku.Name.ToLower() == "image")
+                {
+                    pictureBox1.Load(xmlOku.ReadString());
                 }
             }
         }
