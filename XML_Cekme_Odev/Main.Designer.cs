@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbBasliklar = new System.Windows.Forms.ListBox();
             this.tbBaslik = new System.Windows.Forms.TextBox();
-            this.btnXml = new System.Windows.Forms.Button();
             this.btnHaberGoster = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.timerXML = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // lbBasliklar
@@ -46,24 +47,14 @@
             // 
             // tbBaslik
             // 
-            this.tbBaslik.Location = new System.Drawing.Point(435, 191);
+            this.tbBaslik.Location = new System.Drawing.Point(441, 127);
             this.tbBaslik.Name = "tbBaslik";
             this.tbBaslik.Size = new System.Drawing.Size(328, 20);
             this.tbBaslik.TabIndex = 1;
             // 
-            // btnXml
-            // 
-            this.btnXml.Location = new System.Drawing.Point(542, 62);
-            this.btnXml.Name = "btnXml";
-            this.btnXml.Size = new System.Drawing.Size(123, 53);
-            this.btnXml.TabIndex = 2;
-            this.btnXml.Text = "XML Cek";
-            this.btnXml.UseVisualStyleBackColor = true;
-            this.btnXml.Click += new System.EventHandler(this.btnXml_Click);
-            // 
             // btnHaberGoster
             // 
-            this.btnHaberGoster.Location = new System.Drawing.Point(435, 234);
+            this.btnHaberGoster.Location = new System.Drawing.Point(441, 170);
             this.btnHaberGoster.Name = "btnHaberGoster";
             this.btnHaberGoster.Size = new System.Drawing.Size(328, 69);
             this.btnHaberGoster.TabIndex = 3;
@@ -80,6 +71,12 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Haber Başlıkları";
             // 
+            // timerXML
+            // 
+            this.timerXML.Enabled = true;
+            this.timerXML.Interval = 60000;
+            this.timerXML.Tick += new System.EventHandler(this.timerXML_Tick);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -87,11 +84,11 @@
             this.ClientSize = new System.Drawing.Size(815, 361);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnHaberGoster);
-            this.Controls.Add(this.btnXml);
             this.Controls.Add(this.tbBaslik);
             this.Controls.Add(this.lbBasliklar);
             this.Name = "Main";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,9 +98,9 @@
 
         private System.Windows.Forms.ListBox lbBasliklar;
         private System.Windows.Forms.TextBox tbBaslik;
-        private System.Windows.Forms.Button btnXml;
         private System.Windows.Forms.Button btnHaberGoster;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timerXML;
     }
 }
 

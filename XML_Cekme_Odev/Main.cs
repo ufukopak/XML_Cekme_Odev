@@ -17,18 +17,6 @@ namespace XML_Cekme_Odev
         {
             InitializeComponent();
         }
-        private void btnXml_Click(object sender, EventArgs e)
-        {
-            XmlTextReader xmlOku = new XmlTextReader("http://www.star.com.tr/rss/sondakika.xml");
-            while (xmlOku.Read())
-            {
-                if (xmlOku.Name == "title")
-                {
-                    lbBasliklar.Items.Add(xmlOku.ReadString());
-                }
-            }
-        }
-
         private void lbBasliklar_DoubleClick(object sender, EventArgs e)
         {
             tbBaslik.Text = lbBasliklar.Items[lbBasliklar.SelectedIndex].ToString();
@@ -39,6 +27,31 @@ namespace XML_Cekme_Odev
             HaberDetay haberDetay = new HaberDetay();
             haberDetay.baslik = tbBaslik.Text;
             haberDetay.Show();
+        }
+
+        private void timerXML_Tick(object sender, EventArgs e)
+        {
+            lbBasliklar.Items.Clear();
+            XmlTextReader xmlOku = new XmlTextReader("http://www.star.com.tr/rss/sondakika.xml");
+            while (xmlOku.Read())
+            {
+                if (xmlOku.Name == "title")
+                {
+                    lbBasliklar.Items.Add(xmlOku.ReadString());
+                }
+            }
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            XmlTextReader xmlOku = new XmlTextReader("https://www.haberturk.com/rss/manset.xml");
+            while (xmlOku.Read())
+            {
+                if (xmlOku.Name == "title")
+                {
+                    lbBasliklar.Items.Add(xmlOku.ReadString());
+                }
+            }
         }
     }
 }
